@@ -16,7 +16,7 @@ public class Etudiant {
 	private String nom;
 	private String prenom;
 	private String email;
-
+	
 	// constructeur
 	public Etudiant(String codeEtudiant, String login, String passworld, String nom, String prenom, String email) {
 		this.codeEtudiant = codeEtudiant;
@@ -100,7 +100,28 @@ public class Etudiant {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
 
+	// mettre a jour l'email de l'etudiant
+	public void miseAjourEmailEtudiant(String nouveauEmail) {
+		this.email = nouveauEmail;
+		// on recupere l'url , le login et le passworld
+		String[] parametreDeConnexion = new String[3];
+		parametreDeConnexion = Connecter.parametreConnexion();
+
+		String requeteSql = "UPDATE etudiant SET email=? WHERE codeEtudiant=?";
+		// etablissement de la coonnexion et execution de la requete
+		try (Connection connexion = DriverManager.getConnection(parametreDeConnexion[0], parametreDeConnexion[1],
+				parametreDeConnexion[2]);
+				PreparedStatement preparedStatement = connexion.prepareStatement(requeteSql)) {
+
+			preparedStatement.setString(1, this.email);
+			preparedStatement.setString(2, this.codeEtudiant);
+
+			preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
