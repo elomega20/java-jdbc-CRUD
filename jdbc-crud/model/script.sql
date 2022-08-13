@@ -35,6 +35,7 @@ CREATE TABLE module(
 CREATE TABLE etudiant_module(
     codeEtudiant    varchar(20) NOT NULL,
     codeModule      varchar(20) NOT NULL,
+    CONSTRAINT pk PRIMARY KEY(codeEtudiant,codeModule),
     CONSTRAINT fk_code_etudiant FOREIGN KEY(codeEtudiant)
     REFERENCES etudiant(codeEtudiant) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT fk_code_module FOREIGN KEY(codeModule)
