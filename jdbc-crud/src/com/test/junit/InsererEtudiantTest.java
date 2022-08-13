@@ -7,7 +7,7 @@ import com.crud.Etudiant;
 class InsererEtudiantTest {
 
 	@Test
-	void test() {
+	void insererEtudiantTest() {
 		Etudiant etudiant = new Etudiant("p26 118", "jemy","123","Bond","James", "jemy@gmail.com");
 		etudiant.insererEtudiant();
 	}
