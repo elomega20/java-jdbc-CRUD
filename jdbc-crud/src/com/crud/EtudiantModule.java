@@ -21,7 +21,7 @@ public class EtudiantModule {
 		String[] parametreDeConnexion = new String[3];
 		parametreDeConnexion = Connecter.parametreConnexion();
 
-		String requeteSql = "INSERT INTO etudiant_module VALUES(?,?)";
+		String requeteSql = "INSERT INTO etudiant_module(codeEtudiant,codeModule) VALUES(?,?)";
 		// etablissement de la coonnexion et execution de la requete
 		try (Connection connexion = DriverManager.getConnection(parametreDeConnexion[0], parametreDeConnexion[1],
 				parametreDeConnexion[2]);

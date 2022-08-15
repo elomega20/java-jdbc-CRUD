@@ -8,7 +8,7 @@ class SupprimerEtudiantTest {
 
 	@Test
 	void supprimeretudiantTest() {
-		Etudiant etudiant = new Etudiant("p25 118", "jemy","123","Bond","James", "jemy@gmail.com");
+		Etudiant etudiant = new Etudiant("p26 118", "jemy","123","Bond","James", "jemy@gmail.com");
 		etudiant.supprimerEtudiant();
 	}
 

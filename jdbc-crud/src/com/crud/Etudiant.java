@@ -17,6 +17,55 @@ public class Etudiant {
 	private String prenom;
 	private String email;
 	
+	public String getCodeEtudiant() {
+		return codeEtudiant;
+	}
+
+	public void setCodeEtudiant(String codeEtudiant) {
+		this.codeEtudiant = codeEtudiant;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getPassworld() {
+		return passworld;
+	}
+
+	public void setPassworld(String passworld) {
+		this.passworld = passworld;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
 	// constructeur
 	public Etudiant(String codeEtudiant, String login, String passworld, String nom, String prenom, String email) {
 		this.codeEtudiant = codeEtudiant;

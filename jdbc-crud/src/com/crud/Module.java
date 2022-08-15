@@ -12,6 +12,31 @@ public class Module {
 	private String codeModule;
 	private String libelle;
 	private int credit;
+	
+
+	public String getCodeModule() {
+		return codeModule;
+	}
+
+	public void setCodeModule(String codeModule) {
+		this.codeModule = codeModule;
+	}
+
+	public String getLibelle() {
+		return libelle;
+	}
+
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
+
+	public int getCredit() {
+		return credit;
+	}
+
+	public void setCredit(int credit) {
+		this.credit = credit;
+	}
 
 	// constructeur
 	public Module(String codeModule, String libelle, int credit) {
