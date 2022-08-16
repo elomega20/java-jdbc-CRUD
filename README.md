@@ -10,3 +10,5 @@ par plusieur etudiants , raison pour laquelle il ya la table intermediaire (Etud
 Le fichier config.properties contient les configurations pour se connecter a la base de donnee mysql.
 Si on veut un jour changer notre base de donnee en Postgres ou sqlServer , c'est principalement le fichier
 config.properties qu'on va modifier aulieu de modifier les fichiers .java
+
+Les testes unitaire on ete realiser avec Junit integre dans eclipse.
